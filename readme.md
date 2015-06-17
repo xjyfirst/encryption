@@ -13,8 +13,8 @@ $ composer require txthinking/encryption
 use Tx\CryptProvider;
 
 $crypt = (new CryptProvider([
-    'key' => 'abcdefghijhlmnopqrsduvqxyzaaaaa',
-    'cipher' => MCRYPT_RIJNDAEL_128,
+    'key' => 'abcdefghijhlmnopqrsduvqxyzaaaaaa',
+    'cipher' => 'AES-256-CBC',
 ]))->getInstance();
 
 $r = $crypt->encrypt('who am i');

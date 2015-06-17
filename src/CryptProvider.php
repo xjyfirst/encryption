@@ -26,13 +26,7 @@ class CryptProvider extends ServiceProvider {
         $me = $this;
 		$this->container->singleton('encrypter', function($me)
 		{
-			$encrypter =  new Encrypter($this->conf['key']);
-
-			if (isset($this->conf['cipher']))
-			{
-				$encrypter->setCipher($this->conf['cipher']);
-			}
-
+			$encrypter =  new Encrypter($this->conf['key'], $this->conf['cipher']);
 			return $encrypter;
 		});
 	}

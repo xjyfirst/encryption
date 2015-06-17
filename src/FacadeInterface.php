@@ -4,8 +4,8 @@ interface FacadeInterface{
     // conf return config like this:
     /*
         return [
-            'key' => 'abcdefghijhlmnopqrsduvqxyzaaaaa',
-            'cipher' => MCRYPT_RIJNDAEL_128,
+            'key' => 'abcdefghijhlmnopqrsduvqxyzaaaaaa',
+            'cipher' => 'AES-256-CBC',
         ];
     //*/
     public static function conf();
